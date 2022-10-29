@@ -1,7 +1,6 @@
-# Noita MOD Template
+# Ultimate Mycophile
 
-NoitaMOD制作用のテンプレートリポジトリです。
-`noita-mod-template`を開発MOD名に変更してください。
+スポーン時にきのこシフトを指定回数分実施できます。
 
 ## LICENSE
 
