@@ -1,11 +1,11 @@
 dofile("data/scripts/lib/mod_settings.lua") -- see this file for documentation on some of the features.
 
-local mod_id = "twitch-point-integration"
+local mod_id = "ultimate_mycophile"
 mod_settings_version = 1
 mod_settings =
 {
   {
-		id = "number_of_fungal_shifts",
+		id = "NUMBER_OF_FUNGAL_SHIFTS",
 		ui_name = "NumberOfFungalShift",
 		ui_description = "",
     value_default = "19",
@@ -14,7 +14,7 @@ mod_settings =
     scope = MOD_SETTING_SCOPE_NEW_GAME,
   },
   {
-		id = "shift_span",
+		id = "SHIFT_SPAN",
 		ui_name = "ShiftSpan",
 		ui_description = "This is a shift span frame.",
     value_default = "60",
