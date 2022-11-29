@@ -1,6 +1,7 @@
+print("ultimate_mycophile load")
+
 dofile_once("mods/ultimate_mycophile/files/scripts/lib/utilities.lua")
 Coil = dofile_once("mods/ultimate_mycophile/files/scripts/lib/coil/coil.lua")
-print("ultimate_mycophile load")
 
 ModLuaFileAppend("mods/ultimate_mycophile/files/scripts/fungal_shift.lua", "mods/ultimate_mycophile/files/scripts/limit_break_of_fungal_shift.lua")
 
@@ -12,6 +13,9 @@ function OnPlayerSpawned(player_entity) -- This runs when player entity has been
     Coil.wait(60)
     for i = 1, numberOfShiftTimes do
       player_entity = GetPlayerEntity()
+      if player_entity == nil then
+        break
+      end
       local x, y = EntityGetTransform(player_entity)
       fungal_shift(player_entity, x, y, true)
       Coil.wait(shiftSpan)
