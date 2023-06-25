@@ -51,6 +51,11 @@ function fungal_shift(entity, x, y, debug_no_limits)
       -- shoot particles of new material
       GameCreateParticle(CellFactory_GetName(from_material), x - 10, y - 10, 20, rand(-100, 100), rand(-100, -30), true, true)
       GameCreateParticle(CellFactory_GetName(from_material), x + 10, y - 10, 20, rand(-100, 100), rand(-100, -30), true, true)
+
+      local shift_log = ModSettingGet('ultimate_mycophile.SHOW_SHIFT_LOG') or false
+      if shift_log then
+        GamePrint('Changed from "' .. CellFactory_GetName(from_material) .. '" to "' .. CellFactory_GetName(to_material) .. '"')
+      end
     end
   end
 
