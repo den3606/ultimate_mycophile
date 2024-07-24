@@ -3,12 +3,14 @@ print("ultimate_mycophile load")
 dofile_once("mods/ultimate_mycophile/files/scripts/lib/utilities.lua")
 Coil = dofile_once("mods/ultimate_mycophile/files/scripts/lib/coil/coil.lua")
 
-ModLuaFileAppend("mods/ultimate_mycophile/files/scripts/fungal_shift.lua", "mods/ultimate_mycophile/files/scripts/limit_break_of_fungal_shift.lua")
+ModLuaFileAppend("data/scripts/magic/fungal_shift.lua",
+  "mods/ultimate_mycophile/files/scripts/limit_break_of_fungal_shift.lua")
 
 function OnPlayerSpawned(player_entity) -- This runs when player entity has been created
-  local numberOfShiftTimes = tonumber(ModSettingGet('ultimate_mycophile.NUMBER_OF_FUNGAL_SHIFTS') or 19)
+  local numberOfShiftTimes = tonumber(ModSettingGet('ultimate_mycophile.NUMBER_OF_FUNGAL_SHIFTS') or
+    19)
   local shiftSpan = tonumber(ModSettingGet('ultimate_mycophile.SHIFT_SPAN') or 60)
-  dofile("mods/ultimate_mycophile/files/scripts/fungal_shift.lua")
+  dofile("data/scripts/magic/fungal_shift.lua")
   Coil.add(function()
     Coil.wait(60)
     for i = 1, numberOfShiftTimes do
