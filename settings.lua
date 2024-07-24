@@ -2,11 +2,11 @@ dofile("data/scripts/lib/mod_settings.lua") -- see this file for documentation o
 
 local mod_id = "ultimate_mycophile"
 mod_settings_version = 1
-mod_settings = {{
+mod_settings = { {
   id = "NUMBER_OF_FUNGAL_SHIFTS",
   ui_name = "NumberOfFungalShift",
   ui_description = "",
-  value_default = "19",
+  value_default = "20",
   text_max_length = 4,
   allowed_characters = "0123456789",
   scope = MOD_SETTING_SCOPE_NEW_GAME,
@@ -24,7 +24,7 @@ mod_settings = {{
   ui_description = "You can see what has changed into what.",
   value_default = false,
   scope = MOD_SETTING_SCOPE_RUNTIME,
-}}
+} }
 
 function ModSettingsUpdate(init_scope)
   local old_version = mod_settings_get_version(mod_id) -- This can be used to migrate some settings between mod versions.
